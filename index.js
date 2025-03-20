@@ -6,6 +6,9 @@ const { courseRouter } = require("./routes/course");
 const { adminRouter } = require("./routes/admin");
 // routing in express 
 const app = express();
+app.use(express.json());
+// needed when user want send request with some json data 
+// req.body is now defined and can be used 
 
 app.use("/user" , userRouter);
 app.use("/course" , courseRouter);
